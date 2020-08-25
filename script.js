@@ -2,8 +2,12 @@
 // GIVEN I am using a daily planner to create a schedule
 
 // TIME DISPLAY
+// branch: feature/time-display
 // WHEN I open the planner
 // THEN the current day is displayed at the top of the calendar
+$("#currentDay").replaceWith(moment().format('dddd, MMMM Do YYYY'))
+
+
 
 // DAY CALENDAR VIEW
 // WHEN I scroll down
