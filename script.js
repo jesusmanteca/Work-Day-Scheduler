@@ -3,9 +3,11 @@
 
 // TIME DISPLAY
 // branch: feature/time-display
-// WHEN I open the planner
-// THEN the current day is displayed at the top of the calendar
-$("#currentDay").replaceWith(moment().format('dddd, MMMM Do YYYY'))
+// WHEN I open the planner... THEN the current day is displayed at the top of the calendar
+var currentDay = moment().format('dddd, MMMM Do YYYY')
+var currentHour = moment().format('h')
+console.log(currentHour)
+$("#currentDay").replaceWith(currentDay)
 
 
 
@@ -16,6 +18,8 @@ $("#currentDay").replaceWith(moment().format('dddd, MMMM Do YYYY'))
 // CALENDAR COLOR CODE
 // WHEN I view the time blocks for that day
 // THEN each time block is color-coded to indicate whether it is in the past, present, or future
+    //grab the data-hour row information and match it with the current hour, if it's a match, change the css to .present in order to highlight the back
+    // similarly, if the hour has passed, then change the background to .past and for the future, change the background to the css .future
 
 // ADD LOCAL STORAGE
 // WHEN I refresh the page
