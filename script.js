@@ -34,6 +34,36 @@ $("#currentDay").replaceWith(currentDay)
 // ...
 // WHEN I click the save button for that time block
 // THEN the text for that event is saved in local storage
+//editing the date when clicked: target the parent with the class name, tell it which element you're going to work with and make a function that edits the date
+$(".time-block").on("click", "input", function(){
+    // get current text by first creating a variable that holds that information
+    var task = $(this)
+      .text()
+      .trim()
+    // create new input element
+    var taskInput = $("<input>")
+      .attr("type", "text")
+      
+      .val(task);
+    // swap out elements
+    $(this).replaceWith(taskInput);
+    // automatically focus on new element
+    taskInput.trigger("focus");
+  });
+  // value of due date was changed
+$(".list-group").on("blur", "input[type='text']", function() {
+    // get current text
+    var task = $(this)
+      .val()
+      .trim();
+  
+    // recreate span element with bootstrap classes
+    var taskSpan = $("<input>")
+      .text(task);
+  
+    // replace input with span element
+    $(this).replaceWith(taskSpan);
+  });
 
 
 
