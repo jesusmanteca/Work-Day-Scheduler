@@ -4,12 +4,11 @@
 // TIME DISPLAY
 // branch: feature/time-display
 // WHEN I open the planner... THEN the current day is displayed at the top of the calendar
+
 var currentDay = moment().format('dddd, MMMM Do YYYY')
 var currentHour = moment().format('h')
 console.log(currentHour)
 $("#currentDay").replaceWith(currentDay)
-
-
 
 // DAY CALENDAR VIEW
 // WHEN I scroll down
@@ -21,6 +20,127 @@ $("#currentDay").replaceWith(currentDay)
     //grab the data-hour row information and match it with the current hour, if it's a match, change the css to .present in order to highlight the back
     // similarly, if the hour has passed, then change the background to .past and for the future, change the background to the css .future
 
+var currentTimeIs9 = $(".time-block-9").data("hour").toString()
+var currentTimeIs10 = $(".time-block-10").data("hour").toString()
+var currentTimeIs11 = $(".time-block-11").data("hour").toString()
+var currentTimeIs12 = $(".time-block-12").data("hour").toString()
+var currentTimeIs1 = $(".time-block-1").data("hour").toString()
+var currentTimeIs2 = $(".time-block-2").data("hour").toString()
+var currentTimeIs3 = $(".time-block-3").data("hour").toString()
+var currentTimeIs4 = $(".time-block-4").data("hour").toString()
+var currentTimeIs5 = $(".time-block-5").data("hour").toString()
+
+
+if (currentTimeIs9 == currentHour) {
+    console.log("it's 9am")
+    $("#textArea9").css("background-color", "salmon")
+    $("#textArea10").css("background-color", "palegreen")
+    $("#textArea11").css("background-color", "palegreen")
+    $("#textArea12").css("background-color", "palegreen")
+    $("#textArea1").css("background-color", "palegreen")
+    $("#textArea2").css("background-color", "palegreen")
+    $("#textArea3").css("background-color", "palegreen")
+    $("#textArea4").css("background-color", "palegreen")
+    $("#textArea5").css("background-color", "palegreen")
+
+}
+if (currentTimeIs10 == currentHour) {
+    console.log("it's 10am")
+    $("#textArea9").css("background-color", "lightgray")
+    $("#textArea10").css("background-color", "salmon")
+    $("#textArea11").css("background-color", "palegreen")
+    $("#textArea12").css("background-color", "palegreen")
+    $("#textArea1").css("background-color", "palegreen")
+    $("#textArea2").css("background-color", "palegreen")
+    $("#textArea3").css("background-color", "palegreen")
+    $("#textArea4").css("background-color", "palegreen")
+    $("#textArea5").css("background-color", "palegreen")
+}
+if (currentTimeIs11 == currentHour) {
+    console.log("it's 11am")
+    $("#textArea9").css("background-color", "lightgray")
+    $("#textArea10").css("background-color", "lightgray")
+    $("#textArea11").css("background-color", "salmon")
+    $("#textArea12").css("background-color", "palegreen")
+    $("#textArea1").css("background-color", "palegreen")
+    $("#textArea2").css("background-color", "palegreen")
+    $("#textArea3").css("background-color", "palegreen")
+    $("#textArea4").css("background-color", "palegreen")
+    $("#textArea5").css("background-color", "palegreen")
+}
+if (currentTimeIs12 == currentHour) {
+    console.log("it's 12pm")
+    $("#textArea9").css("background-color", "lightgray")
+    $("#textArea10").css("background-color", "lightgray")
+    $("#textArea11").css("background-color", "lightgray")
+    $("#textArea12").css("background-color", "salmon")
+    $("#textArea1").css("background-color", "palegreen")
+    $("#textArea2").css("background-color", "palegreen")
+    $("#textArea3").css("background-color", "palegreen")
+    $("#textArea4").css("background-color", "palegreen")
+    $("#textArea5").css("background-color", "palegreen")
+}
+if (currentTimeIs1 == currentHour) {
+    console.log("it's 1pm")
+    $("#textArea9").css("background-color", "lightgray")
+    $("#textArea10").css("background-color", "lightgray")
+    $("#textArea11").css("background-color", "lightgray")
+    $("#textArea12").css("background-color", "lightgray")
+    $("#textArea1").css("background-color", "salmon")
+    $("#textArea2").css("background-color", "palegreen")
+    $("#textArea3").css("background-color", "palegreen")
+    $("#textArea4").css("background-color", "palegreen")
+    $("#textArea5").css("background-color", "palegreen")
+}
+if (currentTimeIs2 == currentHour) {
+    console.log("it's 2pm")
+    $("#textArea9").css("background-color", "lightgray")
+    $("#textArea10").css("background-color", "lightgray")
+    $("#textArea11").css("background-color", "lightgray")
+    $("#textArea12").css("background-color", "lightgray")
+    $("#textArea1").css("background-color", "lightgray")
+    $("#textArea2").css("background-color", "salmon")
+    $("#textArea3").css("background-color", "palegreen")
+    $("#textArea4").css("background-color", "palegreen")
+    $("#textArea5").css("background-color", "palegreen")
+}
+if (currentTimeIs3 == currentHour) {
+    console.log("it's 3pm")
+    $("#textArea9").css("background-color", "lightgray")
+    $("#textArea10").css("background-color", "lightgray")
+    $("#textArea11").css("background-color", "lightgray")
+    $("#textArea12").css("background-color", "lightgray")
+    $("#textArea1").css("background-color", "lightgray")
+    $("#textArea2").css("background-color", "lightgray")
+    $("#textArea3").css("background-color", "salmon")
+    $("#textArea4").css("background-color", "palegreen")
+    $("#textArea5").css("background-color", "palegreen")
+}
+if (currentTimeIs4 == currentHour) {
+    console.log("it's 4pm")
+    $("#textArea9").css("background-color", "lightgray")
+    $("#textArea10").css("background-color", "lightgray")
+    $("#textArea11").css("background-color", "lightgray")
+    $("#textArea12").css("background-color", "lightgray")
+    $("#textArea1").css("background-color", "lightgray")
+    $("#textArea2").css("background-color", "lightgray")
+    $("#textArea3").css("background-color", "lightgray")
+    $("#textArea4").css("background-color", "salmon")
+    $("#textArea5").css("background-color", "palegreen")
+}
+if (currentTimeIs5 == currentHour) {
+    console.log("it's 5pm")
+    $("#textArea9").css("background-color", "lightgray")
+    $("#textArea10").css("background-color", "lightgray")
+    $("#textArea11").css("background-color", "lightgray")
+    $("#textArea12").css("background-color", "lightgray")
+    $("#textArea1").css("background-color", "lightgray")
+    $("#textArea2").css("background-color", "lightgray")
+    $("#textArea3").css("background-color", "lightgray")
+    $("#textArea4").css("background-color", "lightgray")
+    $("#textArea5").css("background-color", "salmon")
+}
+
 // ADD LOCAL STORAGE
 // WHEN I refresh the page
 // THEN the saved events persist
@@ -28,45 +148,56 @@ $("#currentDay").replaceWith(currentDay)
 // each block is highlighted 
 // When I click save, i want the information to get passed on to local storage
 
+// First, retrieve what's already in storage and parse it, turn it into other than string
+
+
+// to save, stringify whatever is going into localStorage
+var list = JSON.parse(localStorage.getItem('dayTasks')) || {};
+
 // ADD EDIT TO TIME BLOCKS
 // WHEN I click into a time block
 // THEN I can enter an event
 // ...
 // WHEN I click the save button for that time block
 // THEN the text for that event is saved in local storage
-//editing the date when clicked: target the parent with the class name, tell it which element you're going to work with and make a function that edits the date
-$(".time-block").on("click", "input", function(){
-    // get current text by first creating a variable that holds that information
-    var task = $(this)
-      .text()
-      .trim()
-    // create new input element
-    var taskInput = $("<input>")
-      .attr("type", "text")
-      
-      .val(task);
-    // swap out elements
-    $(this).replaceWith(taskInput);
-    // automatically focus on new element
-    taskInput.trigger("focus");
-  });
-  // value of due date was changed
-$(".list-group").on("blur", "input[type='text']", function() {
-    // get current text
-    var task = $(this)
-      .val()
-      .trim();
-  
-    // recreate span element with bootstrap classes
-    var taskSpan = $("<input>")
-      .text(task);
-  
-    // replace input with span element
-    $(this).replaceWith(taskSpan);
-  });
+
+var loadSchedule = function(storeData, storeTime){
+    // list[storeTime]= storeData;
+    list = [storeData]
+    localStorage.setItem('dayTasks', JSON.stringify(list));
+}
+
+//when you click save
+$(document).ready(function () {
+    $(".saveBtn").click(function(){
+        //get the value from the input box and time and store it as a variable
+        var storeData = $(this).siblings("textarea").val().trim();
+        var storeTime = $(this).siblings("div").text().trim();
+        console.log("Data Text:", storeTime, storeData)
+
+        //push to dayTask list the data from the StoreData
+
+        loadSchedule(storeData, storeTime)
+
+        // Save the to-dos into localStorage
+        // We need to use JSON.stringify to turn the list from an array into a string
+
+
+    })
+});
+
 
 
 
 
 
 // when i click save, get the parent, get me the data hour, put that into a variable, set the variable into the local storage
+
+
+//Ask during office hours
+// making the timeblocks draggable
+// $(".inputBlock").sortable(
+//     {
+//         connectWith: $(".inputBlock")
+//     }
+// )
