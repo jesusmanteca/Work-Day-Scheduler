@@ -148,26 +148,33 @@ if (currentTimeIs5 == currentHour) {
 // each block is highlighted 
 // When I click save, i want the information to get passed on to local storage
 
-// First, retrieve what's already in storage and parse it, turn it into other than string
+var getSchedule = function(){
 
+    var localStorageKey; 
+    var currentTextArea;
 
-// to save, stringify whatever is going into localStorage
-var list = JSON.parse(localStorage.getItem('dayTasks')) || {};
+    for (let i = 1; i < 13; i++) {
+        if (i === 6 || i === 7 || i === 8) {
+            continue
+        }
+        currentTextArea = "#textArea" + i;
+        if (i >= 9 && i < 12){
+            localStorageKey = i + "AM"
+        }
+        else { 
+            localStorageKey = i + "PM"
+        }
+        $(currentTextArea).text(localStorage.getItem(localStorageKey))  
+    }
+}
+getSchedule();
 
-// ADD EDIT TO TIME BLOCKS
-// WHEN I click into a time block
-// THEN I can enter an event
-// ...
-// WHEN I click the save button for that time block
-// THEN the text for that event is saved in local storage
 
 var loadSchedule = function(storeData, storeTime){
-    // list[storeTime]= storeData;
-    list = [storeData]
-    localStorage.setItem('dayTasks', JSON.stringify(list));
+
+    localStorage.setItem(storeTime, storeData);
 }
 
-//when you click save
 $(document).ready(function () {
     $(".saveBtn").click(function(){
         //get the value from the input box and time and store it as a variable
